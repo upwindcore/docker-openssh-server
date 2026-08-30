@@ -1,0 +1,5 @@
+Welcome to OpenSSH Server!
+
+Tips:
+  • Use 'sudo -i' to switch to root user (if sudo access is enabled)
+  • You can volume map your own text file to '/etc/motd' to override this message
