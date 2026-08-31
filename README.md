@@ -35,7 +35,7 @@ services:
       - TCP_FORWARDING=false #optional
       - USER_PASSWORD=password #optional
       - USER_PASSWORD_FILE=/path/to/file #optional
-      - USER_NAME=user #optional
+      - USER_NAME=linuxserver.io #optional
       - LOG_STDOUT= #optional
     volumes:
       - /path/to/openssh-server/config:/config
@@ -62,7 +62,7 @@ docker run -d \
   -e TCP_FORWARDING=false `#optional` \
   -e USER_PASSWORD=password `#optional` \
   -e USER_PASSWORD_FILE=/path/to/file `#optional` \
-  -e USER_NAME=user `#optional` \
+  -e USER_NAME=linuxserver.io `#optional` \
   -e LOG_STDOUT= `#optional` \
   -p 2222:2222 \
   -v /path/to/openssh-server/config:/config \
@@ -105,9 +105,9 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e SUDO_ACCESS=false` | Set to `true` to allow `user`, the ssh user, sudo access. Without `USER_PASSWORD` set, this will allow passwordless sudo access. |
 | `-e PASSWORD_ACCESS=false` | Set to `true` to allow user/password ssh access. You will want to set `USER_PASSWORD` or `USER_PASSWORD_FILE` as well. |
 | `-e TCP_FORWARDING=false` | Optionally set to `true` to allow TCP forwarding. Useful for IDEs. |
-| `-e USER_PASSWORD=password` | Optionally set a sudo password for `user`, the ssh user. If this or `USER_PASSWORD_FILE` are not set but `SUDO_ACCESS` is set to true, the user will have passwordless sudo access. |
+| `-e USER_PASSWORD=password` | Optionally set a sudo password for `linuxserver.io`, the ssh user. If this or `USER_PASSWORD_FILE` are not set but `SUDO_ACCESS` is set to true, the user will have passwordless sudo access. |
 | `-e USER_PASSWORD_FILE=/path/to/file` | Optionally specify a file that contains the password. This setting supersedes the `USER_PASSWORD` option (works with docker secrets). |
-| `-e USER_NAME=user` | Optionally specify a user name (Default:`user`) |
+| `-e USER_NAME=linuxserver.io` | Optionally specify a user name (Default:`linuxserver.io`) |
 | `-e LOG_STDOUT=` | Set to `true` to log to stdout instead of file. |
 | `-v /config` | Contains all relevant configuration files. |
 

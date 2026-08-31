@@ -5,7 +5,7 @@
 mkdir -p \
     /config/{.ssh,logs/openssh,sshd}
 
-USER_NAME=${USER_NAME:-user}
+USER_NAME=${USER_NAME:-linuxserver.io}
 echo "User name is set to $USER_NAME"
 
 # set password for abc to unlock it and set sudo access
