@@ -29,7 +29,6 @@ RUN \
     openssh-sftp-server && \
   echo "**** setup openssh environment ****" && \
   sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config && \
-  sed -i 's/AllowTcpForwarding yes/AllowTcpForwarding no /g' /etc/ssh/sshd_config && \
   usermod --shell /bin/bash abc && \
   echo "**** clean up ****" && \
   apt-get clean && \
